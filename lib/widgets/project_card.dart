@@ -23,7 +23,7 @@ class ProjectCard extends StatelessWidget {
       // Increased elevation for more depth
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
       // Rounded corners
-      shadowColor: Colors.black.withOpacity(0.15),
+      shadowColor: Colors.black.withValues(alpha: 0.15),
       // Softer shadow color
       child: Padding(
         padding: const EdgeInsets.all(16.0),

@@ -99,7 +99,7 @@ Widget homePage(BuildContext context) {
                     ),
                     const SizedBox(height: 16),
                     const Text(
-                      'I’m Harsh Yadav — a Flutter developer with 2.5+ years of experience. I craft scalable mobile/web apps using Flutter, Firebase, and GetX. I\'m also comfortable working with Java, JavaScript, Node.js, and SQL, and can quickly gain command over these technologies to contribute across the stack.',
+                      'I’m Harsh Yadav — a Flutter developer with 3+ years of experience. I craft scalable mobile/web apps using Flutter, Firebase, and GetX. I\'m also comfortable working with Java, JavaScript, Node.js, and SQL, and can quickly gain command over these technologies to contribute across the stack.',
                       style: TextStyle(fontSize: 16, color: Colors.white70),
                     ),
                     const SizedBox(height: 16),
@@ -168,11 +168,12 @@ Widget projectPage() {
               playStoreUrl: 'https://play.google.com/store/apps/details?id=com.hhm.mantras',
               description: 'A beautifully crafted spiritual app dedicated to Sanatan Dharma. Explore daily mantras, aartis, and powerful strotams, all in one place. Features include mantra chanting count tracking, live aarti streaming, and a Hindu calendar with festival alerts. Ideal for users of all ages seeking a devotional companion rooted in tradition and convenience.',
               screenshots: [
-                'assets/images/sanatan (2).png',
-                'assets/images/sanatan (1).png',
-                'assets/images/sanatan (3).png',
-                'assets/images/sanatan (4).png',
-                'assets/images/sanatan (5).png',
+                'assets/images/sanatan_app1.png',
+                'assets/images/sanatan_app2.png',
+                'assets/images/sanatan_app3.png',
+                'assets/images/sanatan_app4.png',
+                'assets/images/sanatan_app5.png',
+                'assets/images/sanatan_app6.png',
               ],
             ),
             ProjectCard(
@@ -475,7 +476,7 @@ List<Widget> _buildHomeContent(BuildContext context, bool isMobile) {
         ],
       ),
       const SizedBox(height: 24),
-      // const DownloadResumeButton()
+      const DownloadResumeButton()
     ],
   );
 
