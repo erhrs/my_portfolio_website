@@ -41,7 +41,7 @@ class _DownloadResumeButtonState extends State<DownloadResumeButton> {
             ),
           ),
           onPressed: () {
-            const url = 'assets/HarshYadav.pdf';
+            const url = 'assets/cv/HarshYadav.pdf';
             html.AnchorElement(href: url)
               ..setAttribute('download', 'HarshYadav.pdf')
               ..click();

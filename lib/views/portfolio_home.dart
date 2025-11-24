@@ -7,7 +7,6 @@ import '../widgets/glass_card.dart';
 import '../widgets/nav_bar.dart';
 import '../widgets/project_card.dart';
 import '../widgets/theme_controller.dart';
-import 'dart:html' as html;
 
 class PortfolioHome extends StatefulWidget {
   const PortfolioHome({super.key});
@@ -99,8 +98,8 @@ Widget homePage(BuildContext context) {
                     ),
                     const SizedBox(height: 16),
                     const Text(
-                      'I’m Harsh Yadav — a Flutter developer with 3+ years of experience. I craft scalable mobile/web apps using Flutter, Firebase, and GetX. I\'m also comfortable working with Java, JavaScript, Node.js, and SQL, and can quickly gain command over these technologies to contribute across the stack.',
-                      style: TextStyle(fontSize: 16, color: Colors.white70),
+                      'I’m Harsh Yadav — Passionate and results-driven Flutter Developer with experience in building high-performance, cross-platform mobile applications. Specialized in Flutter, Firebase, Bloc, GetX, Nodejs and multiplayer game development. Skilled in API integrations, real-time databases, and performance optimization. Adept at delivering scalable, user-centric solutions with a strong focus on UI/UX.',
+                      style: TextStyle(fontSize: 16, color: Colors.white),
                     ),
                     const SizedBox(height: 16),
 
@@ -119,7 +118,7 @@ Widget homePage(BuildContext context) {
                     const SizedBox(height: 8),
                     const Text(
                       'Bachelor of Engineering\n2016 - 2020\nOriental Institute of Science and Technology, Bhopal',
-                      style: TextStyle(fontSize: 16, color: Colors.white70),
+                      style: TextStyle(fontSize: 16, color: Colors.white),
                     ),
                   ],
                 ),
@@ -150,6 +149,20 @@ Widget projectPage() {
           spacing: 20,
           runSpacing: 20,
           children: [
+            ProjectCard(
+              title: 'Trimurti Travel & Holiday',
+              description:
+              'Flutter + Firebase Travel Booking App Developed a complete travel booking application using Flutter and Firebase, along with a built-in mobile admin panel for managing bookings and users. The app enables users to book local & outstation cabs, explore customized holiday packages, receive real-time booking updates, and securely manage their profiles with guest mode support. Designed for a seamless and intuitive travel experience with fast navigation, transparent pricing, and secure authentication.',
+              screenshots: [
+                'assets/images/trimurti6.png',
+                'assets/images/trimurti7.png',
+                'assets/images/trimurti5.png',
+                'assets/images/trimurti4.png',
+                'assets/images/trimurti3.png',
+                'assets/images/trimurti2.png',
+                'assets/images/trimurti1.png',
+              ],
+            ),
             ProjectCard(
               title: 'Ball Escape Game',
               description:
@@ -334,18 +347,6 @@ Widget _buildHorizontalContact(BuildContext context) {
               'Feel free to reach out via email or phone. You can also connect with me on GitHub and LinkedIn.',
               style: TextStyle(color: Colors.white70),
             ),
-            // const SizedBox(height: 24),
-            // ElevatedButton.icon(
-            //   onPressed: () {
-            //     html.window.open('mailto:harsh2709.yadav@gmail.com', '_self');
-            //   },
-            //   icon: const Icon(Icons.email),
-            //   label: const Text('Send Email'),
-            //   style: ElevatedButton.styleFrom(
-            //     backgroundColor: Colors.white24,
-            //     foregroundColor: Colors.white,
-            //   ),
-            // ),
           ],
         ),
       ),
@@ -368,18 +369,6 @@ Widget _buildVerticalContact(BuildContext context) {
         'Feel free to reach out via email or phone. You can also connect with me on GitHub and LinkedIn.',
         style: TextStyle(color: Colors.white),
       ),
-      // const SizedBox(height: 24),
-      // ElevatedButton.icon(
-      //   onPressed: () {
-      //     html.window.open('mailto:harsh2709.yadav@gmail.com', '_self');
-      //   },
-      //   icon: const Icon(Icons.email),
-      //   label: const Text('Send Email'),
-      //   style: ElevatedButton.styleFrom(
-      //     backgroundColor: Colors.white24,
-      //     foregroundColor: Colors.white,
-      //   ),
-      // ),
     ],
   );
 }
@@ -441,7 +430,7 @@ List<Widget> _buildHomeContent(BuildContext context, bool isMobile) {
       Text(
         'A passionate Flutter developer who crafts beautiful, functional mobile & web experiences.',
         style:
-        Theme.of(context).textTheme.bodyLarge?.copyWith(color: Colors.white70),
+        Theme.of(context).textTheme.bodyLarge?.copyWith(color: Colors.white),
         textAlign: isMobile ? TextAlign.center : TextAlign.start,
       ),
       const SizedBox(height: 24),
@@ -490,13 +479,16 @@ List<Widget> _buildHomeContent(BuildContext context, bool isMobile) {
     return [
       profileImage,
       const SizedBox(width: 24),
-      Expanded(child: content), // ✅ Safe to use Expanded inside Row
+      Expanded(child: content),
     ];
   }
 }
 
 Widget _buildProjectList() {
   final projects = [
+    '• Trimurti Travel & Holiday - Local and Outstation cab + Holiday booking app',
+    '• Gro One – Transport & Fleet Management App (Client - Ashok Leyland)',
+    '• Cricscore - A real-time cricket score tracking app',
     '• Nway HRMS – HR app with GPS Attendance, payslips, leave system, employee management',
     '• Hostel Management – Manage hostels, tenants, rooms, payments and parking',
     '• Nway TMS – Transport Management app with fleet, billing, POD',
@@ -506,7 +498,7 @@ Widget _buildProjectList() {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: projects
-        .map((p) => Text(p, style: const TextStyle(color: Colors.white70)))
+        .map((p) => Text(p, style: const TextStyle(color: Colors.white)))
         .toList(),
   );
 }
